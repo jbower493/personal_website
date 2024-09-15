@@ -30,12 +30,14 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1250px] mx-auto`}
             >
                 <header className="px-8 h-[80px] flex justify-between items-center sticky">
-                    <h1 className="text-[28px] font-extrabold uppercase">
-                        Jamie Bower Dev
-                    </h1>
+                    <Link href="/">
+                        <h1 className="text-[28px] font-extrabold uppercase">
+                            Jamie Bower Dev
+                        </h1>
+                    </Link>
                     <nav className="flex gap-8 font-bold">
                         <Link href="/blog">Blog</Link>
-                        <Link href="/about-me">About Me</Link>
+                        <Link href="/about">About Me</Link>
                         <Link href="/contact">Contact</Link>
                     </nav>
                 </header>

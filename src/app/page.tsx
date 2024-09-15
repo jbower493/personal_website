@@ -1,8 +1,8 @@
 export default function Home() {
     return (
         <div>
-            <p className="text-S_text_primary">Hello</p>
-            <p>Goodbye</p>
+            <h2 className="text-S_text_primary">Home</h2>
+            <p>Some text on the home page</p>
         </div>
     );
 }
