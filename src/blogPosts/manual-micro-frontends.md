@@ -90,8 +90,8 @@ export default App;
 
 We should then be able to install dependencies in each application, and run them both separately on different ports, and see our outputs in the browser:
 
-![Host](./blog_images/host_init.PNG)
-![Online Shop](./blog_images/online_shop_init.PNG)
+![Host](/blogPostImages/manual-micro-frontends/host_init.PNG)
+![Online Shop](/blogPostImages/manual-micro-frontends/online_shop_init.PNG)
 
 ## The Host application
 
@@ -204,7 +204,7 @@ footer {
 
 Now if we go back to our host app in the browser, we should have a nav with a link to each of our routes, and the code for each route should render in the main page when that route is active.
 
-![Online Shop](./blog_images/host_scaffolding.PNG)
+![Online Shop](/blogPostImages/manual-micro-frontends/host_scaffolding.PNG)
 
 ## Online Shop MFE
 
@@ -353,7 +353,7 @@ Now lets add the `onlineShopLoader` to our host router, inside the `/online-shop
 
 So we now have the JS of the MFE linked inside the host application, we should be able to run the host app and see our online shop rendering inside of our host application. Lets take a look, we will run our host app and navigate to the `/online-shop` route using our header link.
 
-![Host](./blog_images/online_shop_inside_host.PNG)
+![Host](/blogPostImages/manual-micro-frontends/online_shop_inside_host.PNG)
 
 Great, looks like the Online Shop MFE is successfully rendering inside of the host app!
 
@@ -363,7 +363,7 @@ Great, looks like the Online Shop MFE is successfully rendering inside of the ho
 
 So we have our Online Shop app rendering at the `/online-shop` route. However, if we then navigate to a different route, and then back to the `/online-shop` route again, we no longer see the Online Shop MFE rendering.
 
-![Host](./blog_images/online_shop_inside_host_renavigate.PNG)
+![Host](/blogPostImages/manual-micro-frontends/online_shop_inside_host_renavigate.PNG)
 
 If we open the dev tools "elements" tab while we navigate back and forth to and from the `/online-shop` route, we can see that the MFE script is being added and removed from the dom every time. But the browser is actually caching the script and marking it as "already run", so it doesn't run again on subsequent loads after the first one.
 
@@ -444,7 +444,7 @@ Now once we rebuild and re-link our MFE, we will see that our console log is now
 
 We can successfully navigate to and from our `/online-shop` route, and inside of the MFE, we can also navigate between the `/online-shop/products` and `/online-shop/cart` routes and everything works as expected. But what about if we click our "Home" link inside the MFE app, to navigate back to our `/` route? The URL has changed to `/`, and the MFE is no longer rendering anything, but the host app is still rendering its `/online-shop` page.
 
-![Navigate back to /](./blog_images/navigate_back_to_slash.PNG)
+![Navigate back to /](/blogPostImages/manual-micro-frontends/navigate_back_to_slash.PNG)
 
 If we look at the elements in the dev tools, we can see that the MFE script has not actually unmounted. This is because there is currently no communication between the two routers in the two separate applications, so the host app's router does not know that the route has changed (because the navigation was done within the MFE). The "router state" in the host app and the actual URL pathname have become out of sync.
 
@@ -519,7 +519,7 @@ export const router = createBrowserRouter([
 
 Now if we click the "Online Shop" header link to load up the MFE, and the click "Products" within the MFE navigation, we should see `ROUTE_CHANGE` being logged to the console:
 
-![Route change](./blog_images/route_change_log.PNG)
+![Route change](/blogPostImages/manual-micro-frontends/route_change_log.PNG)
 
 Now, when we receive that message telling us that the MFE has changed route, lets call the `navigate` function returned from React Router's `useNavigate` hook, in order to sync up our host app router state with the actual URL state. We must also pass the `replace` flag to the `navigate` function, otherwise we would end up with a duplicate entry in the browsers history stack, meaning the browser "back" button wouldn't work correctly.
 
@@ -539,7 +539,7 @@ function RootRoute() {
 
 Now, if we navigate to our `/online-shop` route, and click the "Home" link inside the MFE app's navigation, the host app now recognizes that we have navigated back to the `/` route, and updates it's UI accordingly, to show it's home page, meaning that we've now successfully synced up the navigation between the two different routers:
 
-![Host home](./blog_images/host_home.PNG)
+![Host home](/blogPostImages/manual-micro-frontends/host_home.PNG)
 
 ## Store locator MFE
 
@@ -658,7 +658,7 @@ And finally we'll change the id of the root dom node in our html file to match t
 
 Now if we run the Store Locator MFE and navigate to the `/store-locator/locations` route, we should see a similar structure to what our Online Shop MFE renders:
 
-![Host home](./blog_images/vue_mfe.PNG)
+![Host home](/blogPostImages/manual-micro-frontends/vue_mfe.PNG)
 
 ## Rendering the Store Locator MFE inside the host app
 
@@ -726,7 +726,7 @@ Next, lets build our Vue MFE using the Vue build command via `npm run build`. Th
 
 Now if we run our host app and navigate to the `/store-locator` route by clicking Store Locator in the header, we should see our Store Locator MFE rendering within the host application, along with the MFE's child routes, visible if we click the "Locations" link inside the MFE navigation.
 
-![Host with Vue MFE](./blog_images/host_with_vue_mfe.PNG)
+![Host with Vue MFE](/blogPostImages/manual-micro-frontends/host_with_vue_mfe.PNG)
 
 Finally, we need to handle the same issue we had with our Online Shop MFE, where the host was not aware that a navigation had been performed by the MFE's router. Lets follow a similar pattern within the Store Locator MFE, to notify the host app of the route change. The `ROUTE_CHANGE` message listener that we added to the host app already should handle this for us, we just need to post the `ROUTE_CHANGE` message from within the Store Locator MFE every time we navigate.
 
@@ -799,11 +799,11 @@ Note: We still need the timestamp as a query param so that the browser doesn't c
 
 Now we can run both our host frontend with `npm run dev` (from inside the `host` directory), and our host express server with `node ./server/index.js` at the same time. If we navigate to `/online-shop` and `/store-locator`, we should see that the respective MFEs are still loaded and unloaded correctly.
 
-![MFEs with Express](./blog_images/mfes_with_express.PNG)
+![MFEs with Express](/blogPostImages/manual-micro-frontends/mfes_with_express.PNG)
 
 Now comes the magic! If we navigate to the host app in the browser and go to the `/store-locator/locations` route, we see the Locations View UI, which currently just displays the App name and the route we are on:
 
-![Store Locator locations](./blog_images/store_locator_locations.PNG)
+![Store Locator locations](/blogPostImages/manual-micro-frontends/store_locator_locations.PNG)
 
 Next lets add some locations to our Store Locator MFE's "locations" page:
 
@@ -824,7 +824,7 @@ Next lets add some locations to our Store Locator MFE's "locations" page:
 
 Now lets rebuild the Store Locator MFE and redploy the built js to the host server assets folder. If we now go back to the browser and refresh the `/store-locator/locations` route, we can see our list of locations, without having to make any changes to the host applications code, or redploy the host app!
 
-![Store Locator locations with list](./blog_images/store_locator_locations_with_list.PNG)
+![Store Locator locations with list](/blogPostImages/manual-micro-frontends/store_locator_locations_with_list.PNG)
 
 ## Summary
 

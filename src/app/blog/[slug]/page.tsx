@@ -31,8 +31,6 @@ export default async function BlogPost({
 
     const markdownContent = await remark().use(remarkHtml).process(postContent);
 
-    console.log(markdownContent);
-
     return (
         <div>
             <div
