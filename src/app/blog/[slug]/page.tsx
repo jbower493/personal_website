@@ -3,8 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
-
-const blogPostsDir = path.join(process.cwd(), "src/blogPosts");
+import { blogPostsDir } from "../consts";
 
 export default async function BlogPost({
     params,
@@ -26,13 +25,14 @@ export default async function BlogPost({
     );
 
     const grayMatter = matter(fileContents);
-    // const postMeta = grayMatter.data;
+    const postMeta = grayMatter.data;
     const postContent = grayMatter.content;
 
     const markdownContent = await remark().use(remarkHtml).process(postContent);
 
     return (
         <div>
+            <h1>{postMeta.title}</h1>
             <div
                 dangerouslySetInnerHTML={{ __html: markdownContent.value }}
             ></div>

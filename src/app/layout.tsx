@@ -31,9 +31,9 @@ export default function RootLayout({
             >
                 <header className="px-8 h-[80px] flex justify-between items-center sticky">
                     <Link href="/">
-                        <h1 className="text-[28px] font-extrabold uppercase">
+                        <h3 className="text-[28px] font-extrabold uppercase">
                             Jamie Bower Dev
-                        </h1>
+                        </h3>
                     </Link>
                     <nav className="flex gap-8 font-bold">
                         <Link href="/blog">Blog</Link>

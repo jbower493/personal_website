@@ -1,10 +1,9 @@
 ---
-title: "Manual Micro Frontends"
+title: "Micro Frontends with independent routing"
 date: "15/09/2024"
 description: "Micro Frontends with independent routing."
+excerpt: "When thinking about using a [Micro Frontends](https://en.wikipedia.org/wiki/Microfrontend) architecture for a frontend application, there are some complexities that"
 ---
-
-# Micro Frontends with independent routing
 
 When thinking about using a [Micro Frontends](https://en.wikipedia.org/wiki/Microfrontend) architecture for a frontend application, there are some complexities that we have to think about, that don't exists when building a monolithic frontend. One of which is, how do we handle client side routing? In a typical monolithic SPA (single page application), there would only be one router which handles all the routes and navigation between them. So considering that we want to use a Micro Frontends architecture, we could simply have each of our Micro Frontends use the same router (and same version of that router), and nest the MFEs (Micro Frontends) as routes, inside a main parent router.
 
