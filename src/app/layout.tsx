@@ -29,21 +29,16 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1250px] mx-auto`}
             >
-                <header className="px-8 h-[80px] flex justify-between items-center sticky">
-                    <Link href="/">
-                        <h3 className="text-[28px] font-extrabold uppercase">
-                            Jamie Bower Dev
-                        </h3>
-                    </Link>
-                    <nav className="flex gap-8 font-bold">
+                <header className="px-8 h-[80px] flex justify-end items-center w-full">
+                    <nav className="flex gap-10 text-sm uppercase">
+                        <Link href="/">Home</Link>
                         <Link href="/blog">Blog</Link>
+                        <Link href="/projects">Projects</Link>
                         <Link href="/about">About Me</Link>
                         <Link href="/contact">Contact</Link>
                     </nav>
                 </header>
-                <div className="px-8 py-10 min-h-[calc(100dvh-80px)]">
-                    {children}
-                </div>
+                <div className="p-8">{children}</div>
             </body>
         </html>
     );

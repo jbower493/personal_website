@@ -16,7 +16,7 @@ const config: Config = {
                 S_text_primary: "#b3b5fa",
                 S_text_secondary: "#8f8f96",
                 S_text_default: "#ffffff",
-                S_text_inverse: "#000000",
+                S_text_inverse: "#191925",
                 C_Input_outline: "#162f5b",
             },
         },
