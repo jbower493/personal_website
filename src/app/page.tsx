@@ -1,5 +1,12 @@
 import { Button } from "@/components/Button";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Jamie Bower | Software Engineer",
+    description:
+        "Pro golfer turned frontend developer. Love building stuff and learning.",
+};
 
 export default function Home() {
     return (

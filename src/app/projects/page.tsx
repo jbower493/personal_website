@@ -1,7 +1,9 @@
+import { PageTitle } from "@/components/PageTitle";
+
 export default function Projects() {
     return (
         <div>
-            <h2>Projects</h2>
+            <PageTitle>Projects</PageTitle>
         </div>
     );
 }

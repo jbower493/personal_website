@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 import { blogPostsDir } from "../consts";
+import { PageTitle } from "@/components/PageTitle";
+import { Anchor } from "@/components/Anchor";
 
 export default async function BlogPost({
     params,
@@ -32,7 +34,10 @@ export default async function BlogPost({
 
     return (
         <div>
-            <h1>{postMeta.title}</h1>
+            <Anchor href="/blog" className="mb-10 block">
+                Back to blog posts
+            </Anchor>
+            <PageTitle size="sm">{postMeta.title}</PageTitle>
             <div
                 dangerouslySetInnerHTML={{ __html: markdownContent.value }}
             ></div>
