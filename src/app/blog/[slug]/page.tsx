@@ -35,7 +35,7 @@ export default async function BlogPost({
     return (
         <div>
             <Anchor href="/blog" className="mb-10 block">
-                Back to blog posts
+                Back to blog articles
             </Anchor>
             <PageTitle size="sm">{postMeta.title}</PageTitle>
             <div
