@@ -6,6 +6,7 @@ import remarkHtml from "remark-html";
 import { blogPostsDir } from "../consts";
 import { PageTitle } from "@/components/PageTitle";
 import { Anchor } from "@/components/Anchor";
+import "./blogPost.css";
 
 export default async function BlogPost({
     params,
@@ -30,16 +31,27 @@ export default async function BlogPost({
     const postMeta = grayMatter.data;
     const postContent = grayMatter.content;
 
-    const markdownContent = await remark().use(remarkHtml).process(postContent);
+    const markdownContent = await remark()
+        .use(remarkHtml, {
+            handlers: {
+                link: (state, node) => {
+                    console.log(state);
+                    console.log(node);
+                    return node;
+                },
+            },
+        })
+        .process(postContent);
 
     return (
         <div>
             <Anchor href="/blog" className="mb-10 block">
-                Back to blog articles
+                Back to blog posts
             </Anchor>
             <PageTitle size="sm">{postMeta.title}</PageTitle>
             <div
                 dangerouslySetInnerHTML={{ __html: markdownContent.value }}
+                className="blogPost"
             ></div>
         </div>
     );

@@ -86,7 +86,7 @@ export default function Blog({
                         );
                     })
                 ) : (
-                    <p>No articles matched your search.</p>
+                    <p>No blog posts matched your search.</p>
                 )}
             </div>
         </div>
