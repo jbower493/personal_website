@@ -59,7 +59,7 @@ export default function Blog({
             >
                 <Input
                     name="search"
-                    placeholder="Search for an article"
+                    placeholder="Search for a blog post"
                     className="w-[300px]"
                 />
             </form>

@@ -34,11 +34,13 @@ export default async function BlogPost({
     const markdownContent = await remark()
         .use(remarkHtml, {
             handlers: {
-                link: (state, node) => {
-                    console.log(state);
-                    console.log(node);
-                    return node;
-                },
+                // link: (_state, node) => {
+                //     return (
+                //         <Anchor href={node.url} type="external">
+                //             {node.children.value}
+                //         </Anchor>
+                //     );
+                // },
             },
         })
         .process(postContent);
