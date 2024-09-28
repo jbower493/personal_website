@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 type AnchorProps = {
-    children: string;
+    children: ReactNode;
     href: string;
     className?: string;
     type?: "internal" | "external";
