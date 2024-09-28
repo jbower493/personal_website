@@ -5,6 +5,13 @@ import { blogPostsDir } from "./consts";
 import { PageTitle } from "@/components/PageTitle";
 import { PostListItem, PostListItemModel } from "./PostListItem";
 import { Input } from "@/components/Input";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Jamie Bower Dev | Blog",
+    description:
+        "Check out my blog. I post about various software engineering topics that I find interesting.",
+};
 
 /**
  * Date must be provided in the format "DD/MM/YYYY"

@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Jamie Bower | Software Engineer",
+    title: "Jamie Bower Dev | Home",
     description:
         "Pro golfer turned frontend developer. Love building stuff and learning.",
 };
