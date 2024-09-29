@@ -15,22 +15,22 @@ export default function Projects() {
             <div className="mb-16">
                 <div className="w-full mb-5 flex gap-3 items-end">
                     <img
-                        className="w-auto h-[280px] rounded-md"
+                        className="w-full h-auto sm:w-auto sm:h-[280px] rounded-md"
                         src="./projects/sl_mob_1.png"
                         alt="Shopping List first screenshot"
                     />
                     <img
-                        className="w-auto h-[280px] rounded-md"
+                        className="w-auto h-[280px] rounded-md hidden sm:inline"
                         src="./projects/sl_mob_2.png"
                         alt="Shopping List second screenshot"
                     />
                     <img
-                        className="w-auto h-[280px] rounded-md"
+                        className="w-auto h-[280px] rounded-md hidden sm:inline"
                         src="./projects/sl_mob_3.png"
                         alt="Shopping List third screenshot"
                     />
                 </div>
-                <div className="flex justify-between items-end mb-5">
+                <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
                     <h3 className="text-[20px] text-S_text_primary leading-none">
                         Shopping List
                     </h3>
@@ -74,17 +74,17 @@ export default function Projects() {
             <div className="mb-0">
                 <div className="w-full mb-5 flex gap-3 items-end">
                     <img
-                        className="w-auto h-[280px] rounded-md"
+                        className="w-auto h-[280px] rounded-md hidden lg:inline"
                         src="./projects/wp_desktop.jpg"
                         alt="Workout Planner desktop view"
                     />
                     <img
-                        className="w-auto h-[240px] rounded-md"
+                        className="w-full h-auto sm:w-auto sm:h-[240px] rounded-md"
                         src="./projects/wp_mob.png"
                         alt="Workout Planner mobile view"
                     />
                 </div>
-                <div className="flex justify-between items-end mb-5">
+                <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
                     <h3 className="text-[20px] text-S_text_primary leading-none">
                         Workout Planner
                     </h3>

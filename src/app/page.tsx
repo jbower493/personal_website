@@ -18,7 +18,7 @@ export default function Home() {
                 <h2 className="text-[22px] font-semibold text-center mb-8">
                     Software Engineer
                 </h2>
-                <p className="text-sm text-S_text_secondary w-[440px] text-center mb-4">
+                <p className="text-sm text-S_text_secondary max-w-[440px] text-center mb-4">
                     Pro golfer turned frontend developer. Love building stuff
                     and learning.
                 </p>

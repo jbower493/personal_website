@@ -7,9 +7,11 @@ import { usePathname } from "next/navigation";
 export function NavItem({
     children,
     href,
+    onClick,
 }: {
     children: string;
     href: string;
+    onClick?: () => void;
 }) {
     const pathname = usePathname();
 
@@ -24,6 +26,7 @@ export function NavItem({
                             : pathname === href,
                 }
             )}`}
+            onClick={onClick}
         >
             {children}
         </Link>
