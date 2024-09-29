@@ -15,9 +15,7 @@ export function Anchor({
     className,
     type = "internal",
 }: AnchorProps) {
-    const classes = `text-S_text_info text-sm hover:underline ${clsx(
-        className
-    )}`;
+    const classes = `text-S_text_info hover:underline ${clsx(className)}`;
 
     if (type === "external") {
         return (

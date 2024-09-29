@@ -23,7 +23,9 @@ export function PostListItem({
                 {title}
             </h2>
             <p className="flex-1 text-S_text_secondary text-sm">{excerpt}...</p>
-            <Anchor href={`/blog/${slug}`}>Read article</Anchor>
+            <Anchor href={`/blog/${slug}`} className="text-sm">
+                Read article
+            </Anchor>
         </article>
     );
 }

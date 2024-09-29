@@ -74,10 +74,8 @@ export default function Blog({
             <p className="mb-10">
                 One of the things I like to do in my spare time is learn new
                 things by building side projects, and just generally trying out
-                things that I&apos;ve heard about by don&apos;t yet understand.
-                I usually make notes as I go during this process, so that I can
-                refer back to my learnings at any point, so I recently decided
-                what better way to make notes than in a blog post!
+                things that I&apos;ve heard about but don&apos;t yet understand.
+                I decided to share my learnings by creating a blog.
             </p>
             <div className="flex gap-5 flex-wrap">
                 {filteredPosts.length > 0 ? (
