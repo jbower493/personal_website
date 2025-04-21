@@ -62,7 +62,7 @@ export default function Projects() {
                 </p>
             </div>
 
-            <div className="mb-0">
+            <div className="mb-16">
                 <div className="w-full mb-5 flex gap-3 items-end">
                     <img
                         className="w-auto h-[280px] rounded-md hidden lg:inline"
