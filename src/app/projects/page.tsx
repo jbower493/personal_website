@@ -13,23 +13,6 @@ export default function Projects() {
             <PageTitle>Projects</PageTitle>
 
             <div className="mb-16">
-                <div className="w-full mb-5 flex gap-3 items-end">
-                    <img
-                        className="w-full h-auto sm:w-auto sm:h-[280px] rounded-md"
-                        src="./projects/sl_mob_1.png"
-                        alt="Shopping List first screenshot"
-                    />
-                    <img
-                        className="w-auto h-[280px] rounded-md hidden sm:inline"
-                        src="./projects/sl_mob_2.png"
-                        alt="Shopping List second screenshot"
-                    />
-                    <img
-                        className="w-auto h-[280px] rounded-md hidden sm:inline"
-                        src="./projects/sl_mob_3.png"
-                        alt="Shopping List third screenshot"
-                    />
-                </div>
                 <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
                     <h3 className="text-[20px] text-S_text_primary leading-none">
                         Shopping List
@@ -60,16 +43,26 @@ export default function Projects() {
                     online and free to use, click the &quot;View Site&quot;
                     button above to check it out!
                 </p>
+                <div className="w-full mt-5 flex gap-3 items-end">
+                    <img
+                        className="w-full h-auto sm:w-auto sm:h-[280px] rounded-md"
+                        src="./projects/sl_mob_1.png"
+                        alt="Shopping List first screenshot"
+                    />
+                    <img
+                        className="w-auto h-[280px] rounded-md hidden sm:inline"
+                        src="./projects/sl_mob_2.png"
+                        alt="Shopping List second screenshot"
+                    />
+                    <img
+                        className="w-auto h-[280px] rounded-md hidden sm:inline"
+                        src="./projects/sl_mob_3.png"
+                        alt="Shopping List third screenshot"
+                    />
+                </div>
             </div>
 
             <div className="mb-16">
-                <div className="w-full mb-5 flex gap-3 items-end">
-                    <img
-                        className="w-auto h-[280px] rounded-md hidden lg:inline"
-                        src="./projects/my_react.png"
-                        alt="My React desktop view"
-                    />
-                </div>
                 <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
                     <h3 className="text-[20px] text-S_text_primary leading-none">
                         My React
@@ -89,21 +82,16 @@ export default function Projects() {
                 <p className="text-S_text_default">
                     After working with React for a while, and using it to build things, I became more curious about how it actually works internally. So I decided to attempt to build my own version of a &quot;React like&quot; framework from scratch, in order to learn more about its inner workings.
                 </p>
+                <div className="w-full mt-5 flex gap-3 items-end">
+                    <img
+                        className="w-auto h-[280px] rounded-md hidden lg:inline"
+                        src="./projects/my_react.png"
+                        alt="My React desktop view"
+                    />
+                </div>
             </div>
 
             <div className="mb-0">
-                <div className="w-full mb-5 flex gap-3 items-end">
-                    <img
-                        className="w-auto h-[280px] rounded-md hidden lg:inline"
-                        src="./projects/wp_desktop.jpg"
-                        alt="Workout Planner desktop view"
-                    />
-                    <img
-                        className="w-full h-auto sm:w-auto sm:h-[240px] rounded-md"
-                        src="./projects/wp_mob.png"
-                        alt="Workout Planner mobile view"
-                    />
-                </div>
                 <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
                     <h3 className="text-[20px] text-S_text_primary leading-none">
                         Workout Planner
@@ -128,6 +116,18 @@ export default function Projects() {
                     management and Bootstrap for styling) and Node JS with
                     Express for the backend API.
                 </p>
+                <div className="w-full mt-5 flex gap-3 items-end">
+                    <img
+                        className="w-auto h-[280px] rounded-md hidden lg:inline"
+                        src="./projects/wp_desktop.jpg"
+                        alt="Workout Planner desktop view"
+                    />
+                    <img
+                        className="w-full h-auto sm:w-auto sm:h-[240px] rounded-md"
+                        src="./projects/wp_mob.png"
+                        alt="Workout Planner mobile view"
+                    />
+                </div>
             </div>
         </div>
     );
