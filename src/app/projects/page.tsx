@@ -44,15 +44,6 @@ export default function Projects() {
                                 View Site
                             </a>
                         </Button>
-                        <Button asChild variant="outline" size="sm">
-                            <a
-                                href="https://github.com/jbower493/shopping_list"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View Code
-                            </a>
-                        </Button>
                     </div>
                 </div>
                 <p className="text-S_text_default">
