@@ -87,7 +87,7 @@ export default function Projects() {
                     </div>
                 </div>
                 <p className="text-S_text_default">
-                    After working with React for a while, and using it to build things, I became more curious about how it actually works internally. So I decided to attempt to build my own version of a "React like" framework from scratch, in order to learn more about it's inner workings.
+                    After working with React for a while, and using it to build things, I became more curious about how it actually works internally. So I decided to attempt to build my own version of a &quot;React like&quot; framework from scratch, in order to learn more about its inner workings.
                 </p>
             </div>
 
