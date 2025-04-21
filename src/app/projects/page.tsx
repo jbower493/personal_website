@@ -66,6 +66,35 @@ export default function Projects() {
                 <div className="w-full mb-5 flex gap-3 items-end">
                     <img
                         className="w-auto h-[280px] rounded-md hidden lg:inline"
+                        src="./projects/my_react.png"
+                        alt="My React desktop view"
+                    />
+                </div>
+                <div className="flex-col sm:flex-row flex gap-4 justify-between sm:items-end mb-5">
+                    <h3 className="text-[20px] text-S_text_primary leading-none">
+                        My React
+                    </h3>
+                    <div className="flex gap-3">
+                        <Button asChild variant="outline" size="sm">
+                            <a
+                                href="https://github.com/jbower493/my_react"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                View Code
+                            </a>
+                        </Button>
+                    </div>
+                </div>
+                <p className="text-S_text_default">
+                    After working with React for a while, and using it to build things, I became more curious about how it actually works internally. So I decided to attempt to build my own version of a "React like" framework from scratch, in order to learn more about it's inner workings.
+                </p>
+            </div>
+
+            <div className="mb-0">
+                <div className="w-full mb-5 flex gap-3 items-end">
+                    <img
+                        className="w-auto h-[280px] rounded-md hidden lg:inline"
                         src="./projects/wp_desktop.jpg"
                         alt="Workout Planner desktop view"
                     />
