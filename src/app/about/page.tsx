@@ -30,14 +30,7 @@ export default function About() {
                     Background
                 </h2>
                 <p>
-                    Prior to 2021, pretty much my whole life up until that point
-                    had been dedicated to a career in professional golf. I
-                    trained for many years to get to the point of turning
-                    professional, in which time I spent several years traveling
-                    around the world representing the England team. I then
-                    turned professional in 2017, and went on to compete
-                    professionally for 4 years, before eventually deciding on a
-                    career change in 2021.
+                    I trained to be an elite golfer throughout my teenage years, first representing my county (Yorkshire), before going on to represent England internationally. In 2017, I turned professional and signed with a sport management company. I competed on the European Challenge Tour and PGA Euro Pro Tours for several years. In 2020 I took up coding as a hobby and loved it so much that I decided to pursue a career to software engineering shortly after.
                 </p>
             </section>
             <section>
